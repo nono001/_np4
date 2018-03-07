@@ -1,0 +1,18 @@
+-- Doctrine Migration File Generated on 2018-02-20 11:28:55
+
+-- Version 20180218123209
+CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, email VARCHAR(255) NOT NULL, UNIQUE INDEX UNIQ_8D93D649E7927C74 (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;
+DROP TABLE user_message;
+INSERT INTO migration_versions (version) VALUES ('20180218123209');
+
+-- Version 20180220094556
+ALTER TABLE user ADD password VARCHAR(64) NOT NULL;
+INSERT INTO migration_versions (version) VALUES ('20180220094556');
+
+-- Version 20180220095942
+ALTER TABLE user ADD password VARCHAR(64) NOT NULL;
+INSERT INTO migration_versions (version) VALUES ('20180220095942');
+
+-- Version 20180220100533
+ALTER TABLE user ADD password VARCHAR(64) NOT NULL;
+INSERT INTO migration_versions (version) VALUES ('20180220100533');
